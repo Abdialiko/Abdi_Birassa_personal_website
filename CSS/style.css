@@ -1,0 +1,146 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif; /* Modern font */
+    color: var(--text-color);
+    background-color: rgb(1, 35, 35);
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: var(--nav-background-color);
+    background-color: rgb(1, 35, 35);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Add shadow for depth */
+    padding: 20px;
+    display: flex;
+    color: rgb(6, 150, 136);
+    font-weight: 500;
+    font-size: large;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
+    height: 50px;
+}
+.logo {
+    margin: 0px;
+    padding: 0px;
+    padding-left: 70px;
+    
+}
+.logo h1{
+    font-size: 50px;
+    margin: 0px;
+    padding-top: 0px;
+
+
+color:white;
+}
+.nav-link{
+    color: #ffffff;
+    margin-left: 40vw;
+
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease-in-out; /* Smooth transition for hover effects */
+    
+}
+ a:focus {
+    text-decoration: none;
+    color: rgb(225, 150, 150);
+    transition: color 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+a:hover {
+    color: #f00e0ee6; /* Darken color on hover */
+}
+
+section {
+    margin: 0px auto;
+    max-width: 100%; /* Max width for content readability */
+    padding-top: 70px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Add shadow for depth */
+    border: 1px solid var(--border-color);
+    background-color: #fff7f7;
+
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack nav items vertically on smaller screens */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Adjust margin for vertical layout */
+    }
+}
+.Hom{
+    background-color: rgb(1, 35, 35);
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    flex: content;
+}
+.Home1{
+    width: 50vw;
+    margin: 10px;
+    height: 70vh;
+    color:#fff7f7
+}
+.Home1 h1{
+ color  :#ffffff;
+ padding-top:5px;
+
+ font-size: 30px;
+}
+
+.Home1 p{
+    color  :#ffffff;
+   
+    font-size: 20px;
+   }
+.Home1 h3{
+    color  :#07c0a1 ;
+    font-size: 35px;
+   }
+.hero-text{
+margin-top:  20rem;
+margin-left: 30%;
+}
+.Home2{
+    width: 50vw;
+    background-image: url('');
+    background-size:contain;
+    background-repeat: no-repeat;    
+    background-position: center;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+  
+    margin-right: 20%;
+    
+
+}
+.criclar-hero{
+    padding-top: 20px;
+    display: flex;
+    margin-left: 15vw;
+    width: 40rem;
+    height: 60rem;
+  
+    border-radius: 45% 45% 45% 45%;
+}
