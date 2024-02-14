@@ -144,3 +144,111 @@ margin-left: 30%;
   
     border-radius: 45% 45% 45% 45%;
 }
+.criclar {
+    margin-top:4rem ;
+    display: flex;
+    margin-left: 45vw;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+}
+
+#about {
+    background-color: rgb(7, 54, 54);
+    padding:60px;
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    align-content: center;
+}
+.aboutme{
+   text-align: center;
+}
+
+
+#about h1 {
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 44px;
+    margin-bottom: 20px;
+}
+
+#about p {
+    margin-top: 6rem; 
+    margin: 10rem; 
+    color: #ffffff;
+    font-size: 26px;
+    line-height: 1.6;
+}
+#experience {
+    color: white;
+    background-color: rgb(1, 35, 35);
+    padding: 40px;
+    margin-top: 20px;
+
+}
+
+.job {
+    background-color: #264839; 
+    color: #fff; 
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+/* Style the job titles */
+.job h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Style the job descriptions */
+.job p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Style the job details list */
+.job ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Style the job details list items */
+.job li {
+    margin-bottom: 5px;
+}
+#experience h1 {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#experience p {
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 1.5;
+}
+.experience-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.recent-experience, .previous-experience {
+    width: 48%; /* Adjusts the width of each column to fit side by side */
+}
+
+/* Additional styling for responsiveness */
+@media screen and (max-width: 768px) {
+    .experience-container {
+        flex-direction: column;
+    }
+
+    .recent-experience, .previous-experience {
+        width: 100%;
+    }
+}
