@@ -1,9 +1,11 @@
+
 body {
     font-family: 'Segoe UI', Arial, sans-serif; /* Modern font */
     color: var(--text-color);
     background-color: rgb(1, 35, 35);
     margin: 0;
     padding: 0;
+    margin-top: 100px;
 }
 
 nav {
@@ -37,7 +39,7 @@ color:white;
 }
 .nav-link{
     color: #ffffff;
-    margin-left: 40vw;
+    margin-left: 50vw;
 
 }
 nav ul {
@@ -74,7 +76,7 @@ section {
     padding-top: 70px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Add shadow for depth */
     border: 1px solid var(--border-color);
-    background-color: #fff7f7;
+  
 
 }
 
@@ -96,7 +98,7 @@ section {
     flex: content;
 }
 .Home1{
-    width: 50vw;
+    width: 40vw;
     margin: 10px;
     height: 70vh;
     color:#fff7f7
@@ -105,7 +107,7 @@ section {
  color  :#ffffff;
  padding-top:5px;
 
- font-size: 30px;
+ font-size: 50px;
 }
 
 .Home1 p{
@@ -252,3 +254,188 @@ margin-left: 30%;
         width: 100%;
     }
 }
+.project{
+margin-top: 100px;
+
+}
+.project-card {  
+     background-color: #264839; 
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+  .skills-container {
+    max-width: 1800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgb(1, 35, 35);
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .skills-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .skill-category {
+    background-color: #264839; 
+   
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .skill-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .skill-category h3 {
+    margin-top: 0;
+  }
+  
+  /* Add responsiveness */
+  @media (max-width: 768px) {
+    .skills-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+.language-skills-container {
+    max-width: 1800px;
+    margin: auto;
+    background-color: rgb(1, 35, 35);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    color:#fff
+
+  }
+  
+  .language-skills-container h2{
+    text-align: center;
+    color: #ffffff; 
+  }
+  .language-skills-container  .language h3 {
+    color: #416958; 
+  }
+  .language {
+    margin-bottom: 20px;
+  }
+  
+  .language-name {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .proficiency {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+    text-align: center;
+  }
+  
+  .proficiency span {
+    display: block;
+    background-color: #264839; 
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .proficiency {
+      grid-template-columns: 1fr;
+    }
+  }
+  .education-container {
+    max-width: 1800px;
+    margin: auto;
+    background-color: rgb(1, 35, 35);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+  }
+  
+  .education-container h2 {
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  .timeline {
+    position: relative;
+    padding-left: 50px;
+    list-style: none;
+  }
+  
+  .timeline-item {
+    margin-bottom: 20px;
+  }
+  
+  .timeline-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #000000;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+  }
+  
+  .timeline-content {
+    padding-left: 20px;
+    background-color: #264839;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .timeline {
+      padding-left: 30px;
+    }
+  
+    .timeline-icon {
+      width: 25px;
+      height: 25px;
+      font-size: 14px;
+    }
+  
+    .timeline-content {
+      padding-left: 15px;
+    }
+  }
+ .cer{
+
+    margin-left:300px ;
+    width:  70%;
+    height: 700px;
+ }
+
+ .cer-con{
+    padding-left: 10rem; 
+  padding: 10rem;
+ }
