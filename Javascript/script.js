@@ -91,3 +91,18 @@ function showcer(cerid) {
         document.getElementById('cer').innerHTML = `<img src="${imageUrl}" class="cer" alt="Certificate Image">`;
     }
 }
+var mybutton = document.getElementById("scrollToTopBtn");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+
+scroll to the top of the document
+mybutton.onclick = function() {
+    document.body.scrollTop = 0;     document.documentElement.scrollTop = 0;
