@@ -9,44 +9,38 @@
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">
-                <h1> Abdi Aliko</h1>
-            </div>
-
-
-            <div class="nav-link">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html#about">About Me</a></li>
-                    <li><a href="Work.html">Work Experience</a></li>
-                    <li><a href="education.html">Education</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="Certification.html">Certification</a></li>
-                    <li><a href="Exercise.html">Exercise</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                   
-                </ul>
-            </div>
+        <nav class="navbar">
+            <div class="logo">Aliko</div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About Me</a></li>
+                <li><a href="Work.html">Work Experience</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="Certification.html" class="active">Certification</a></li>
+                <li><a href="Exercise.html">Exercise</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
+        
     </header>
-    <div class="project" id="projects-list" style="display: flex; flex-wrap: wrap; justify-content: space-around;">
-        <div class="project-card" onclick="showcer('cer1')">Web dev Fundamental</div>
-        <div class="project-card" onclick="showcer('cer2')">Cloud core</div>
-        <div class="project-card" onclick="showcer('cer3')">African changemakers</div>
-
-    </div>
+    <section  class="Certification">
+        <div class="project" id="projects-list">
+            <div class="project-card" onclick="showcer('cer1')">Web dev Fundamental</div>
+            <div class="project-card" onclick="showcer('cer2')">Cloud core</div>
+            <div class="project-card" onclick="showcer('cer3')">African changemakers</div>
     
-    <div id="cer" class="cer-con">
-        <!-- Project details will be displayed here -->
-    </div>
-  
-<footer>
-    <p>Connect with me on social media...</p>
-</footer>
-<script src="script.js"></script>
-</body>
-</html>
+        </div>
+        
+        <div id="cer" class="cer-con">
+            <!-- Project details will be displayed here -->
+        </div>
+      
+    </section>
+    
 <div class="footer">
     <div class="footer-content">
         <div class="footer-section about">
@@ -70,7 +64,7 @@
 
 <button id="scrollToTopBtn">Scroll To Top</button>
 
-<script src="script.js"></script>
-<script src="script.js"></script>
+<script src="/Javascript/script.js"></script>
+
 </body>
 </html>

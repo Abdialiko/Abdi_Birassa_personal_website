@@ -1,9 +1,18 @@
-// Add any JavaScript for interactive elements here
-// Example: A simple script to toggle a mobile navigation menu
-document.addEventListener('DOMContentLoaded', function() {
-    // Implementation for mobile menu toggle
+
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelector('.nav-toggle').addEventListener('click', function () {
+        var nav = document.querySelector('.nav-link ul');
+        if (nav.style.display === "block") {
+            nav.style.display = "none";
+        } else {
+            nav.style.display = "block";
+        }
+    });
 });
+
+
 function showDetails(projectId) {
+    
     var titles = {
         'erp': 'Enterprise resource planning System (ERP) [18/03/2018 – 22/12/2018] ',
         'crime': 'Crime management system [13/02/2019 – 18/06/2019] ',
@@ -72,9 +81,9 @@ function showDetails(projectId) {
 }
 function showcer(cerid) {
     var details = {
-        'cer1': './cer1.jpg',
-        'cer2': './cer2.jpg',
-        'cer3': './cer3.jpg',
+        'cer1': './image/cer1.jpg',
+        'cer2': './image/cer2.jpg',
+        'cer3': './image/cer3.jpg',
     };
     var imageUrl = details[cerid] || 'No details available';
     if (cerid === 'cer1') {
@@ -88,7 +97,7 @@ function showcer(cerid) {
         <div class="verify">
         <a class="btn0" href="https://www.credly.com/badges/aafc1378-e0c2-4845-8813-5cfa30374483/public_url"> Verify Here</a> </div>`;
     }else{
-        document.getElementById('cer').innerHTML = `<img src="${imageUrl}" class="cer" alt="Certificate Image">`;
+        document.getElementById('cer').innerHTML = `<img src="${imageUrl}" class="cer1" alt="Certificate Image">`;
     }
 }
 var mybutton = document.getElementById("scrollToTopBtn");
@@ -103,6 +112,44 @@ function scrollFunction() {
     }
 }
 
-scroll to the top of the document
 mybutton.onclick = function() {
-    document.body.scrollTop = 0;     document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.querySelector('.nav-toggle');
+    navToggle.addEventListener('click', () => {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('showing');
+    });
+});
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  slideIndex += n;
+  showSlides(slideIndex);
+}
+
+// Thumbnail image controls - if you decide to add thumbnails
+function currentSlide(n) {
+  slideIndex = n;
+  showSlides(slideIndex);
+}
+
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  slides[slideIndex-1].style.display = "block";  
+}
+
+

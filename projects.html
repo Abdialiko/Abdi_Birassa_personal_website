@@ -8,27 +8,27 @@
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">
-                
-            </div>
-
-
-            <div class="nav-link">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html#about">About Me</a></li>
-                    <li><a href="Work.html">Work Experience</a></li>
-                    <li><a href="education.html">Education</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="Certification.html">Certification</a></li>
-                    <li><a href="Exercise.html">Exercise</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
+        <nav class="navbar">
+            <div class="logo">Aliko</div>
+            <button id="nav-toggle"class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About Me</a></li>
+                <li><a href="Work.html">Work Experience</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="Certification.html">Certification</a></li>
+                <li><a href="Exercise.html">Exercise</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
+        
     </header>
-    <div class="project" id="projects-list" style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+<section>
+    
+    <div class="project" id="projects-list" >
         <div class="project-card" onclick="showDetails('erp')">(ERP)</div>
         <div class="project-card" onclick="showDetails('crime')">Crime Management System</div>
         <div class="project-card" onclick="showDetails('union')">Union/Cooperative Information Management System</div>
@@ -51,12 +51,11 @@
         <!-- Project details will be displayed here -->
     </div>
 </div>
+
+</section>
 <footer>
     <p>Connect with me on social media...</p>
 </footer>
-<script src="./Javascript/script.js"></script>
-</body>
-</html>
 <div class="footer">
     <div class="footer-content">
         <div class="footer-section about">
@@ -80,7 +79,7 @@
 
 <button id="scrollToTopBtn">Scroll To Top</button>
 
-<script src="script.js"></script>
-<script src="script.js"></script>
+<script src="/Javascript/script.js"></script>
+
 </body>
 </html>
