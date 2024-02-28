@@ -15,32 +15,35 @@
         <div id="menu" class="fas fa-bars"></div>
         <nav class="navbar">
             <ul>
-            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="index.html#about">About Me</a></li>
             <li><a href="Work.html">Work Experience</a></li>
             <li><a href="education.html">Education</a></li>
-            <li><a href="projects.html">Projects</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
             <li><a href="Certification.html">Certification</a></li>
             <li><a href="Exercise.html">Exercise</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li><input type="text" id="searchInput" placeholder="Search projects..." onkeyup="filterProjects()"></li>
             </ul>
+            
         </nav>
     </header>
     <div style=" height: 50dvh; background-image: url(./Image/hero12.jpeg); background-size: cover; display: flex; justify-content: center; align-items: center; font-size:50px; color:rgb(215, 194, 2); padding-top: 100px;" class="GFG">
 
     </div>
+   
 <section class="project-container">
     <h1>My Projects:</h1>
-    
+   
     <div class="project" id="projects-list" >
-        <div class="project-card"  id="erp"    onclick="showDetails('erp')">(ERP)</div>
-        <div class="project-card"  id="crime"  onclick="showDetails('crime')">Crime Management System</div>
-        <div class="project-card"  id="union"  onclick="showDetails('union')">Union/Cooperative Information Management System</div>
-        <div class="project-card"  id="Survey" onclick="showDetails('survey')">Survey Management System</div>
-        <div class="project-card"  id="guardium" onclick="showDetails('guardium')">IBM Security Guardium Data Protection for Databases</div>
-        <div class="project-card"  id="waf"   onclick="showDetails('waf')">WAF F5 </div>
-        <div class="project-card"  id="book"   onclick="showDetails('book')">Book and Inventory Management System</div>
-        <div class="project-card"  id="gotrip" onclick="showDetails('gotrip')">Go Trip</div>
+        <div class="project-card"  id="erp"    onclick="showDetails('erp')"><h1>(ERP)</h1></div>
+        <div class="project-card"  id="crime"  onclick="showDetails('crime')"><h1>Crime Management System</h1></div>
+        <div class="project-card"  id="union"  onclick="showDetails('union')"><h1>Union/Cooperative Information Management System</h1></div>
+        <div class="project-card"  id="Survey" onclick="showDetails('survey')"><h1>Survey Management System</h1></div>
+        <div class="project-card"  id="guardium" onclick="showDetails('guardium')"><h1>IBM Security Guardium Data Protection for Databases</h1></div>
+        <div class="project-card"  id="waf"   onclick="showDetails('waf')"><h1>WAF F5</h1></div>
+        <div class="project-card"  id="book"   onclick="showDetails('book')"><h1>Book and Inventory Management System</h1></div>
+        <div class="project-card"  id="gotrip" onclick="showDetails('gotrip')"><h1>Go Trip</h1></div>
     </div>
     <div class="overlay" onclick="togglePopup()"></div>
      <div class="popup">
@@ -82,12 +85,14 @@
   
         <div class="box">
             <h3>quick links</h3>
-            <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
-            <a href="#about"><i class="fas fa-chevron-circle-right"></i> about</a>
-            <a href="#skills"><i class="fas fa-chevron-circle-right"></i> skills</a>
-            <a href="#education"><i class="fas fa-chevron-circle-right"></i> education</a>
-            <a href="#work"><i class="fas fa-chevron-circle-right"></i> work</a>
-            <a href="#experience"><i class="fas fa-chevron-circle-right"></i> experience</a>
+            <a href="index.html">        >    <i class="fas fa-chevron-circle-right"></i> home</a>
+            <a href="index.html#about">  >    <i class="fas fa-chevron-circle-right"></i> about</a>
+            <a href="Work.html">         >    <i class="fas fa-chevron-circle-right"></i> Work</a>
+            <a href="education.html">    > <i class="fas fa-chevron-circle-right"></i> education</a>
+            <a href="projects.html">     >      <i class="fas fa-chevron-circle-right"></i> Project</a>
+            <a href="Certification.html">> <i class="fas fa-chevron-circle-right"></i> Certification</a>
+            <a href="Exercise.html">     >      <i class="fas fa-chevron-circle-right"></i> Exercise</a>
+            <a href="contact.html">      > <i class="fas fa-chevron-circle-right"></i> Contact</a>
         </div>
   
         <div class="box">
@@ -112,12 +117,11 @@
   </section>
       <!-- footer section ends -->
       </div>
+
+      <button id="scrollToTopBtn">Scroll To Top</button>
       <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    
-    <button id="scrollToTopBtn">Scroll To Top</button>
-    
-    <script src="./Javascript/script.js"></script>
-    
+      <script src="./Javascript/script.js"></script>
+      <script src="./Javascript/slide.js"></script>
     </body>
     </html>
     

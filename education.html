@@ -15,10 +15,10 @@
     <div id="menu" class="fas fa-bars"></div>
     <nav class="navbar">
         <ul>
-        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="index.html#about">About Me</a></li>
         <li><a href="Work.html">Work Experience</a></li>
-        <li><a href="education.html">Education</a></li>
+        <li><a href="education.html" class="active">Education</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="Certification.html">Certification</a></li>
         <li><a href="Exercise.html">Exercise</a></li>
@@ -38,16 +38,31 @@
           <div class="timeline-item">
             <div class="timeline-icon">🎓</div>
             <div class="timeline-content">
-              <h3>BSc Computer Science</h3>
-              <p>Mekelle University Institute of Technology [ 09/09/2013 – 08/07/2017 ]</p>
-              <p>Address: Northwestern Tigray Region, Mekelle (Ethiopia)</p>
-            </div>
+              <div class="e1">
+                <h3>BSc Computer Science</h3>
+                <p>Mekelle University Institute of Technology [ 09/09/2013 – 08/07/2017 ]</p>
+                <p>Address: Northwestern Tigray Region, Mekelle (Ethiopia)</p>
+             
+              </div>
+              <div class="e2">
+                <img src="./Image/mek2.jpeg" class="edu-img" alt="Description of the image" />
+
+              </div>
+               </div>
           </div>
           <div class="timeline-item">
             <div class="timeline-icon">📚</div>
             <div class="timeline-content">
-              <h3>MSc in Computer Science</h3>
+              <div class="e1">
+                <h3>MSc in Computer Science</h3>
               <p>American College of Technology [ 01/10/2022 – Current ]</p>
+              </div>
+              <div class="e2">
+                <img src="./Image/act.jpg" class="edu-img" alt="Description of the image" />
+
+              </div>
+               </div>
+             
             </div>
           </div>
         </div>
@@ -118,15 +133,16 @@
         </div>
   
         <div class="box">
-            <h3>quick links</h3>
-            <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
-            <a href="#about"><i class="fas fa-chevron-circle-right"></i> about</a>
-            <a href="#skills"><i class="fas fa-chevron-circle-right"></i> skills</a>
-            <a href="#education"><i class="fas fa-chevron-circle-right"></i> education</a>
-            <a href="#work"><i class="fas fa-chevron-circle-right"></i> work</a>
-            <a href="#experience"><i class="fas fa-chevron-circle-right"></i> experience</a>
-        </div>
-  
+          <h3>quick links</h3>
+          <a href="index.html">        >    <i class="fas fa-chevron-circle-right"></i> home</a>
+          <a href="index.html#about">  >    <i class="fas fa-chevron-circle-right"></i> about</a>
+          <a href="Work.html">         >    <i class="fas fa-chevron-circle-right"></i> Work</a>
+          <a href="education.html">    > <i class="fas fa-chevron-circle-right"></i> education</a>
+          <a href="projects.html">     >      <i class="fas fa-chevron-circle-right"></i> Project</a>
+          <a href="Certification.html">> <i class="fas fa-chevron-circle-right"></i> Certification</a>
+          <a href="Exercise.html">     >      <i class="fas fa-chevron-circle-right"></i> Exercise</a>
+          <a href="contact.html">      > <i class="fas fa-chevron-circle-right"></i> Contact</a>
+      </div>
         <div class="box">
             <h3>contact info</h3>
             <p> <i class="fas fa-phone"></i>    0910813571</p> 
@@ -150,10 +166,10 @@
     <!-- footer section ends -->
     </div>
   
-  <button id="scrollToTopBtn">Scroll To Top</button>
-  
-  <script src="./Javascript/script.js"></script>
-  
+    <button id="scrollToTopBtn">Scroll To Top</button>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="./Javascript/script.js"></script>
+    <script src="./Javascript/slide.js"></script>
   </body>
   </html>
   

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        canvas {
+            background-color: black;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="visualizer"></canvas>
+
+    <script>
+        const canvas = document.getElementById('visualizer');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        function generateColors() {
+            const colors = [];
+            const numColors = Math.floor(Math.random() * 6) + 3; // Random between 3 and 8 colors
+            for (let i = 0; i < numColors; i++) {
+                const red = Math.floor(Math.random() * 256);
+                const green = Math.floor(Math.random() * 256);
+                const blue = Math.floor(Math.random() * 256);
+                colors.push(`rgb(${red}, ${green}, ${blue})`);
+            }
+            return colors;
+        }
+
+        let angleOffset = 0; // Added for animation
+
+        function drawVisualizer() {
+            resizeCanvas();
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
+            const radius = Math.min(canvas.width, canvas.height) / 10; // Smaller radius for more intricate design
+            const numCircles = 5; // Number of circles for layered effect
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            const colors = generateColors();
+
+            for (let j = 0; j < numCircles; j++) { // Loop to create layered circles
+                const currentRadius = radius * (j + 1);
+                const currentOffset = angleOffset * (j + 1); // Offset each layer for dynamic movement
+                for (let i = 0; i < colors.length; i++) {
+                    const angle = (i / colors.length) * Math.PI * 2 + currentOffset;
+                    const x = centerX + Math.cos(angle) * currentRadius;
+                    const y = centerY + Math.sin(angle) * currentRadius;
+
+                    ctx.beginPath();
+                    ctx.arc(x, y, currentRadius / 4, 0, Math.PI * 2, false); // Draw circles instead of lines
+                    ctx.fillStyle = colors[i];
+                    ctx.fill();
+                }
+            }
+
+            angleOffset += 0.05; // Increment angleOffset for animation
+
+            requestAnimationFrame(drawVisualizer);
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+
+        drawVisualizer();
+    </script>
+</body>
+</html>

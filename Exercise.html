@@ -15,24 +15,80 @@
         <div id="menu" class="fas fa-bars"></div>
         <nav class="navbar">
             <ul>
-            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="index.html#about">About Me</a></li>
             <li><a href="Work.html">Work Experience</a></li>
             <li><a href="education.html">Education</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="Certification.html">Certification</a></li>
-            <li><a href="Exercise.html">Exercise</a></li>
+            <li><a href="Exercise.html" class="active">Exercise</a></li>
             <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <section id="about" >
-        <div class="card" style="margin: 100px; box-shadow: red;"> </div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
+    <div style=" height: 50dvh; background-image: url(./Image/hero12.jpeg); background-size: cover; display: flex; justify-content: center; align-items: center; font-size:50px; color:rgb(215, 194, 2); padding-top: 100px;" class="GFG">
 
+    </div>
+
+    <section id="Exercise" >
+        <h1>Exercise</h1>
+        <div class="card-con" > 
+        <a href="./Exercise/Abdi Birassa Lab Exersice 1/Exercise00.html" class="card EXE_BTN" target="_blank">
+            <div>
+                <h2>Lab 1</h2>
+                <p> Run Code</p>
+            </div>
+        </a>
+        <a href="./Exercise/Labexercise2/lab2.html" class="card EXE_BTN" target="_blank">
+            <div>
+                <h2>Lab 2</h2>
+                <p> Run Code</p>
+            </div>
+        </a>
+        <a href="./Exercise/Labexercise2/colorlight.html" class="card EXE_BTN" target="_blank">
+            <div>
+                <h2>color</h2>
+                <p>Run Code</p>
+            </div>
+        </a>
+        <a class="card EXE_BTN" onclick="togglePopup()">
+            <div>
+                <h2>PHP</h2>
+                <p>Run Code</p>
+            </div>
+        </a>
+      
+    </div>
+    <div class="overlay" onclick="togglePopup()"></div>
+    <div class="popup" >
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Full Name</title>
+        </head>
+        <body>
+        
+        <?php
+            $first_name = $_POST['fname'];
+            $last_name = $_POST['lname'];
+            $full_name = $first_name . " " . $last_name;
+        ?>
+        
+        <h1>Full Name: <?php echo $full_name; ?></h1>
+        
+        
+        <form action="fullname.php" method="post">
+            <label for="fname">First Name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Last Name:</label><br>
+            <input type="text" id="lname" name="lname"><br><br>
+            <button type="submit" value="Submit"> Submit</button>
+        </form>
+        </body>
+        </html>
+       </div>
     </section>
 
     <section class="footer">
@@ -46,12 +102,14 @@
       
             <div class="box">
                 <h3>quick links</h3>
-                <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
-                <a href="#about"><i class="fas fa-chevron-circle-right"></i> about</a>
-                <a href="#skills"><i class="fas fa-chevron-circle-right"></i> skills</a>
-                <a href="#education"><i class="fas fa-chevron-circle-right"></i> education</a>
-                <a href="#work"><i class="fas fa-chevron-circle-right"></i> work</a>
-                <a href="#experience"><i class="fas fa-chevron-circle-right"></i> experience</a>
+                <a href="index.html">        >    <i class="fas fa-chevron-circle-right"></i> home</a>
+                <a href="index.html#about">  >    <i class="fas fa-chevron-circle-right"></i> about</a>
+                <a href="Work.html">         >    <i class="fas fa-chevron-circle-right"></i> Work</a>
+                <a href="education.html">    > <i class="fas fa-chevron-circle-right"></i> education</a>
+                <a href="projects.html">     >      <i class="fas fa-chevron-circle-right"></i> Project</a>
+                <a href="Certification.html">> <i class="fas fa-chevron-circle-right"></i> Certification</a>
+                <a href="Exercise.html">     >      <i class="fas fa-chevron-circle-right"></i> Exercise/a>
+                <a href="contact.html">      > <i class="fas fa-chevron-circle-right"></i> Contact</a>
             </div>
       
             <div class="box">
@@ -74,9 +132,10 @@
         <h1 class="credit">Designed with by <a href="https://www.linkedin.com/in/abdi-aliko-1103a4128"> Abdi Birassa </a></h1>
       
       </section>
-<button id="scrollToTopBtn">Scroll To Top</button>
-
-<script src="./Javascript/script.js"></script>
+      <button id="scrollToTopBtn">Scroll To Top</button>
+      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+      <script src="./Javascript/script.js"></script>
+      <script src="./Javascript/slide.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        canvas {
+            background-color: black;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="visualizer"></canvas>
+
+    <script>
+        // Get canvas element
+        const canvas = document.getElementById('visualizer');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        // Generate random colors
+        function generateColors() {
+            const colors = [];
+            const numColors = Math.floor(Math.random() * 6) + 3; // Random between 3 and 8 colors
+            for (let i = 0; i < numColors; i++) {
+                const red = Math.floor(Math.random() * 256);
+                const green = Math.floor(Math.random() * 256);
+                const blue = Math.floor(Math.random() * 256);
+                colors.push(`rgb(${red}, ${green}, ${blue})`);
+            }
+            return colors;
+        }
+
+        // Draw visualizer
+        function drawVisualizer() {
+            resizeCanvas();
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
+            const radius = Math.min(canvas.width, canvas.height) / 3;
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            const colors = generateColors();
+
+            for (let i = 0; i < colors.length; i++) {
+                const angle = (i / colors.length) * Math.PI * 2;
+                const x = centerX + Math.cos(angle) * radius;
+                const y = centerY + Math.sin(angle) * radius;
+
+                ctx.beginPath();
+                ctx.moveTo(centerX, centerY);
+                ctx.lineTo(x, y);
+                ctx.lineWidth = 5;
+                ctx.strokeStyle = colors[i];
+                ctx.stroke();
+            }
+
+            requestAnimationFrame(drawVisualizer);
+        }
+
+        // Resize canvas when the window is resized
+        window.addEventListener('resize', resizeCanvas);
+
+        // Start drawing visualizer
+        drawVisualizer();
+    </script>
+</body>
+</html>
