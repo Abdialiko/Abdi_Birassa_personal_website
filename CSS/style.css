@@ -1541,3 +1541,7 @@ background-image: url(../Image/hero9.jpg);
       1px -1px 0 #030240,
       -1px -1px 0 #030240,
 }
+.boximage{
+  width: 20rem;
+  height: auto;
+}
