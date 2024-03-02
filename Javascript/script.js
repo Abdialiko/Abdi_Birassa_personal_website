@@ -1,6 +1,6 @@
 
 var typed = new Typed(".typing-text", {
-    strings: [ "project managment", "IT Coordinator", "System Analyst",  "ICT Officer"],
+    strings: [ "project Manager", "IT Coordinator", "System Analyst",  "ICT Officer"],
     loop: true,
     typeSpeed: 50,
     backSpeed: 25,
